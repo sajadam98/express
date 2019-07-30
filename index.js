@@ -31,7 +31,7 @@ app.get('/' , (req , res)=>{
 app.use(express.static(path.join(__dirname, "public")));
 
 //Members Api Routes
-app.use('/api/members' , router);
+app.use('/api/users' , router);
 
 const port = process.env.PORT || 5000;
 
