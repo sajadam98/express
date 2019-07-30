@@ -1,11 +1,13 @@
 const express = require("express");
 const path = require("path");
+var cors = require('cors')
 const logger = require('./middleware/logger.js');
 const router = require('./routes/api/members');
 const app = express();
 const exphbs = require('express-handlebars');
 const members = require('./Members');
 
+app.use(cors())
 //init middleware
 app.use(logger);
 
